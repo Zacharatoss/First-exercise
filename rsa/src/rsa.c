@@ -4,6 +4,7 @@ int prime_check(long long int number);
 
 int main(int argc, char * argv[]){
 
+
     if (argc!=6){
         printf("Usage: ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>\n");
         return 1;
