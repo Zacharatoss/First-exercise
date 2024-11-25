@@ -2,6 +2,8 @@
 #include <stdlib.h>
 int prime_check(long long int number);
 long long int gcd(long long int e, long long int phiN);
+long long int decrypt(long long int m,long long int d,long long int N);
+long long int encrypt(long long int m,long long int e,long long int N);
 
 int main(int argc, char * argv[]){
     long long int N,message,phip,phiq,m,phiN;
@@ -62,8 +64,11 @@ int main(int argc, char * argv[]){
         printf("Message is larger than N\n");
         return 1;
     }
-
-    return 0;
+    if ( op == 'e'){
+        encrypt(m,e,N);
+    } else {
+        decrypt(m,d,N);
+    }
 }
 
 
@@ -79,8 +84,6 @@ int prime_check(long long int number){
     return times;       // returns the amount of numbers that are dividable with it
 }
 
-
-
 long long int gcd(long long int e, long long int phiN){ 
     // finds with the help of the Euclidean Algorithm the GCD 
     if (e % phiN == 0){
@@ -88,4 +91,24 @@ long long int gcd(long long int e, long long int phiN){
     } else {
         return gcd(phiN,e % phiN);       // calls again the same funcion with diffrent argumets until it finds the GCD
     }
+}
+
+long long int decrypt(long long int m,long long int d,long long int N){
+    long long int result;
+    result= m^d % N;
+    printf("%lld\n", result); 
+    return 0;
+}
+
+long long int encrypt(long long int m,long long int e,long long int N){
+    long long int result;
+    unsigned long long power;
+    power=1;
+    for (long long int i=0;i<e;i++){
+        printf("%lld\n", power);
+        power *= m;
+    }
+    result = power % N;
+    printf("%lld\n", result);
+    return 0;
 }
