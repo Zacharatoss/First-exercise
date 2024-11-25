@@ -13,7 +13,7 @@ int main(int argc, char * argv[]){
     }
     // check for correct syntax of the first argument
     char op = argv[1][0];         // changes the first argument into a veriable to be able to compere it with the correct form ('dec' or 'enc')               
-    if ( op != 'd' && op !='e'){
+    if ( (argv[1][0] != 'e' && argv[1][1] !='n' && argv[1][2]!='c') || (argv[1][0] != 'd' && argv[1][1] !='e' && argv[1][2]!='c')){
         printf("First argument must be 'enc' or 'dec'\n");
         return 1;
     }
@@ -94,9 +94,6 @@ long long int gcd(long long int e, long long int phiN){
 
 long long int module(long long int m,long long int exp,long long int N){
     long long int result;
-    if (N==1){
-        return 0;
-    }
     result = 1;
     for (long long int i=1;i<=exp;i++){
         result = (result * m) % N;
