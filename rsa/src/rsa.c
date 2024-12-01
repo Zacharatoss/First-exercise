@@ -29,7 +29,7 @@ int main(int argc, char * argv[]){
         return 1;
     }
     // checks if p and q are prime 
-    if (prime_check(p)!=2 || prime_check(q)!=2){ // uses the function prime_check that returns how many times the number can be divited and because prime   
+    if (prime_check(p)==1 || prime_check(q)==1){ // uses the function prime_check that returns how many times the number can be divited and because prime   
         printf("p and q must be prime\n");      // numbers can only be divided with them selfes and 1 if the number that is reterund is not 2 then its not prime
         return 1;
     }
@@ -73,15 +73,18 @@ int main(int argc, char * argv[]){
 
 
 int prime_check(long long int number){        
-    long long int times=0;          // makes the counter start from 0
-    // divides all of the numbers that are equal or lower from the main number
-    for(int i=1;i<=number;i++){ 
-        // adds 1 to the counter every time it finds a number that can be divided with it
-        if(number % i == 0){
-            times++;
+    long long int rem;
+    int i=2,ans=0;
+    while (i<= number/2){
+        rem = number % i;
+        if (rem != 0){
+            i++;
+        }else {
+            ans=1;
+            return ans;
         }
     }
-    return times;       // returns the amount of numbers that are dividable with it
+    return ans;
 }
 
 long long int gcd(long long int e, long long int phiN){ 
