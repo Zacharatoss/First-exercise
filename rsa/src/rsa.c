@@ -99,8 +99,13 @@ long long int gcd(long long int e, long long int phiN){
 long long int module(long long int m,long long int exp,long long int N){
     long long int result;
     result = 1;
-    for (long long int i=1;i<=exp;i++){
-        result = (result * m) % N;
+    m = m % N;
+    while (exp>0){
+        if (exp % 2 == 1){
+            result = (result * m) % N;
+        }
+        m = (m*m) % N;
+        exp = exp/2;
     }
     printf("%lld\n", result);
     return 0;
