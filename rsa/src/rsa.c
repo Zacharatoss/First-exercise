@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int prime_check(long long int number);
 long long int gcd(long long int e, long long int phiN);
 long long int module(long long int m,long long int exp,long long int N);
@@ -12,8 +13,8 @@ int main(int argc, char * argv[]){
         return 1;
     }
     // check for correct syntax of the first argument
-    char op = argv[1][0];         // changes the first argument into a veriable to be able to compere it with the correct form ('dec' or 'enc')               
-    if ( (argv[1][0] != 'e' && argv[1][1] !='n' && argv[1][2]!='c') || (argv[1][0] != 'd' && argv[1][1] !='e' && argv[1][2]!='c')){
+     char *ch = argv[1];                        
+    if (strcmp(ch, "enc") != 0 && strcmp(ch, "dec") != 0){   
         printf("First argument must be 'enc' or 'dec'\n");
         return 1;
     }
@@ -63,7 +64,7 @@ int main(int argc, char * argv[]){
         printf("Message is larger than N\n");
         return 1;
     }
-    if ( op == 'e'){
+    if ( strcmp(ch, "enc")==0){
         module(m,e,N);
     } else {
         module(m,d,N);
