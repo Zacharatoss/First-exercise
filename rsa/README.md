@@ -21,8 +21,8 @@ It uses 3 functions:
 #### Usage
  
 To run the program firstly you will have to compile it: 
-```gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c
+```gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c```
 
 When the program is compiled to use it follow the following syntax: 
-```echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>
+```echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>```
 
