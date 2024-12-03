@@ -21,8 +21,26 @@ It uses 3 functions:
 #### Usage
  
 To run the program firstly you will have to compile it: 
-```gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c```
+``gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c``
 
 When the program is compiled to use it follow the following syntax: 
-```echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>```
+`echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>`
 
+#### Examples
+
+```bash 
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ ./rsa pop 1 2 3 4
+First argument must be 'enc' or 'dec'
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo $?
+1
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$  ./rsa enc 1 2 3 4
+p and q must be prime
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo $?
+1
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 5 173 17 19
+264
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo $?
+0
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 65537 2278459553 62971 38609
+741088023
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ 
