@@ -21,11 +21,14 @@ It uses 3 functions:
 #### Usage
  
 To run the program firstly you will have to compile it: 
-``gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c``
+```bash 
+gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c 
+```
 
 When the program is compiled to use it follow the following syntax: 
-`echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>`
-
+```bash 
+echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>
+```
 #### Examples
 
 ```bash 
@@ -44,3 +47,19 @@ sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo $?
 sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 65537 2278459553 62971 38609
 741088023
 sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ 
+```
+
+#### Time 
+
+```bash 
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 65537 2278459553 62971 38609 > enc_msg
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ cat enc_msg
+741088023
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$  time ./rsa dec 65537 2278459553 62971 38609 < enc_msg
+42
+
+real    0m0,014s
+user    0m0,014s
+sys     0m0,001s
+sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ 
+```
