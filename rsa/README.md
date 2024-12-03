@@ -16,3 +16,13 @@ It uses 3 functions:
 - module 
 
   This function depending on the first argument ("enc" or "dec") can encrypt a message by passing to the function the message (m), N which is the modulo and e to the veriable exp or decrypt a message by passing to the function the message (m), N which is the modulo and d to the veriable exp. This function is bases to the [Modular_exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) which is uses to calculate the power of really big numbers and it is uses for the encryption and decryption  
+
+
+#### Usage
+ 
+To run the program firstly you will have to compile it: 
+```gcc -O3 -Wall -Wextra -Werror -pedantic -o rsa rsa.c
+
+When the program is compiled to use it follow the following syntax: 
+```echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>
+
