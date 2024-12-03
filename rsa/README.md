@@ -6,7 +6,7 @@ This project can read 5 arguments from the command line as well as a message and
 It uses 3 functions:
 - Prime_check 
  
-  This function gets a number as an input and divides with all the numbers that are possible to be divited witch is number/2 if it finds any number that can divide our number, then our number it not prime and the function returns a value of 1.
+  This function gets a number as an input and divides with all the numbers that are possible to be divited witch is number/2. If it finds any number that can divide our number, then our number it not prime and the function returns a value of 1.
   [Prime_code](https://www.educative.io/courses/introduction-to-computers-and-programming/determine-if-a-number-is-prime#Pseudocode) 
 
 - GCD 
