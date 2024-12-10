@@ -10,7 +10,7 @@ int main(int argc, char * argv[]){
     long long int N,message,phip,phiq,m,phiN;
         // check for correct amount of arguments 
     if (argc!=6){
-        printf("Usage: ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>\n");
+        printf("Usage: %s enc|dec <exp_exp> <priv_exp> <prime1> <prime2>\n", argv[0]);
         return 1;
     }
         // check for correct syntax of the first argument                        
