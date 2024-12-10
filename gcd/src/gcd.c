@@ -6,7 +6,7 @@ int main(int argc, char * argv[]){              // argc and argv is used to read
                                                 // argc reads the amount of arguments while argv reads the string of the arguments 
     long long int final;                        
     if (argc!=3){                               // check for correct amount of arguments
-        printf("Usage: ./gcd <num1> <num2>\n");
+        printf("Usage: %s <num1> <num2>\n", argv[0]);
         return 1;
     }
     long long num0 = atoll(argv[1]);            // change the string to a long long int 
