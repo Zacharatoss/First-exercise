@@ -1,4 +1,4 @@
-#### Project description
+## Project description
 
 This project can read 5 arguments from the command line as well as a message and it can either encrypt the message or decrypt it.
 
@@ -18,7 +18,7 @@ It uses 3 functions:
   This function depending on the first argument ("enc" or "dec") can encrypt a message by passing to the function the message (m), N which is the modulo and e to the veriable exp or decrypt a message by passing to the function the message (m), N which is the modulo and d to the veriable exp. This function is bases to the [Modular_exponentiation](https://en.wikipedia.org/wiki/Modular_exponentiation) which is uses to calculate the power of really big numbers and it is uses for the encryption and decryption  
 
 
-#### Usage
+## Usage
  
 To run the program firstly you will have to compile it: 
 ```bash 
@@ -29,7 +29,7 @@ When the program is compiled to use it follow the following syntax:
 ```bash 
 echo <message> | ./rsa enc|dec <exp_exp> <priv_exp> <prime1> <prime2>
 ```
-#### Examples
+## Examples
 
 ```bash 
 sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ ./rsa pop 1 2 3 4
@@ -49,7 +49,7 @@ sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 65537 22784595
 sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ 
 ```
 
-#### Time 
+## Time 
 
 ```bash 
 sdi2400048@linux24:~/hw1-Zacharatoss/rsa/src$ echo 42 | ./rsa enc 65537 2278459553 62971 38609 > enc_msg
