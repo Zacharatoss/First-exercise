@@ -2,8 +2,8 @@
 #include <stdlib.h>
 long long int gcd(long long int num0, long long int num1);    // declaration of the function that will be used
 
-int main(int argc, char * argv[]){              // argc and argv is used to read arguments from the command line
-                                                // argc reads the amount of arguments while argv reads the string of the arguments 
+int main(int argc, char * argv[]){            // argc and argv is used to read arguments from the command line
+                                        // argc reads the amount of arguments while argv reads the string of the arguments 
     long long int final;                        
     if (argc!=3){                               // check for correct amount of arguments
         printf("Usage: %s <num1> <num2>\n", argv[0]);
