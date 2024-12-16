@@ -56,3 +56,8 @@ Then you can enter the numbers you what to find the GCD with the command:
     real    0m0,016s
     user    0m0,007s
     sys     0m0,011s
+
+
+## Test folder 
+
+In the test folder there are two files <input.txt> and <output.txt>. In the <input.txt> there are two random numbers that can be used as an input to the program. In the <output.txt> is plased the Greatest Common Divisor of the numbers that are in the <input.txt> file.
